@@ -25,12 +25,13 @@
 
 ## Naming
 
-### Branching
+### Github Workflow
 1. Always branch off of *most recent* master
   - Please note that you must switch back to master before branching between tasks
 2. Merge conflicts *must* involve everyone whose code is involved.
 3. Branch naming. Please prefix github username and suffix (separated by hyphens) a brief task name.
   `<githubusername>-<task-title>`
+4. If your team created a PR you have to have the OTHER team merge it.
 
 ### CSS
 Prefer classes over other selector in conjunction with BEM.
