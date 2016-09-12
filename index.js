@@ -10,7 +10,7 @@ render((
   <Router history={ hashHistory }>
     <Route path="/nav" component={ Nav }>
       <Route path="/" component={ Main }/>
-      <Route path="new-article" component={ NewArticle }/>
+      <Route path="/new-article" component={ NewArticle }/>
       <Route path="/article" component={ Article }/>
     </Route>
   </Router>
