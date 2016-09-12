@@ -1,5 +1,8 @@
 # SA Tech Voices
 
+## Development
+1. `$ npm i`
+
 ## Tech Decisions
 ### Frameworks
 1. React.js
