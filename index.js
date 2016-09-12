@@ -8,8 +8,8 @@ import Article from './lib/Article'
 
 render((
   <Router history={ hashHistory }>
-    <Route path="/" component={ Nav }>
-      <Route path="/main" component={ Main }/>
+    <Route path="/nav" component={ Nav }>
+      <Route path="/" component={ Main }/>
       <Route path="new-article" component={ NewArticle }/>
       <Route path="/article" component={ Article }/>
     </Route>
