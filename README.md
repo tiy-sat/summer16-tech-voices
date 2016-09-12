@@ -25,6 +25,13 @@
 
 ## Naming
 
+### Branching
+1. Always branch off of *most recent* master
+  - Please note that you must switch back to master before branching between tasks
+2. Merge conflicts *must* involve everyone whose code is involved.
+3. Branch naming. Please prefix github username and suffix (separated by hyphens) a brief task name.
+  `<githubusername>-<task-title>`
+
 ### CSS
 Prefer classes over other selector in conjunction with BEM.
 `.Block__element--modifier`
