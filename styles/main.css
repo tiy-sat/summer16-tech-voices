@@ -123,3 +123,49 @@ body {
 .footer__socialMediaLink:nth-child(2) {
   margin: 0 10px;
 }
+
+
+/*
+  Article styling (detail/blog)
+*/
+
+.articleContainer {
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  width: 60%;
+}
+
+.article__header {
+  border: 1px solid rgb(0,0,0);
+  margin: 20px 0;
+  padding: 20px 100px;
+}
+
+.article__authorHeadshot {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px
+}
+
+.article__author {
+  display: inline-block;
+  font-size: 40px;
+  margin: 0;
+  position: absolute;
+  left: 350px;
+  top: 65px;
+  vertical-align: top;
+}
+.article__timestamp {
+  position: absolute;
+  left: 350px;
+  top: 130px;
+}
+
+.article {
+  border: 1px solid rgb(0,0,0);
+  margin: 20px 0;
+  padding: 20px;
+}
