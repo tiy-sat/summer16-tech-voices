@@ -1,6 +1,14 @@
 /*
   Main Stylesheet
 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0;
+}
 
 /*
   Nav Styling
@@ -32,4 +40,86 @@
   position: absolute;
   right: 3rem;
   top: 3rem;
+}
+
+/*
+  Main Page Styling
+*/
+
+.main__banner {
+  background-image: url("http://www.thesanantonioriverwalk.com/images/site/home_night_banner.jpg");
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+.main__bannerOverlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+
+.main__bannerText {
+  color: rgb(245, 245, 245);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}
+
+.article__list {
+  padding: 30px 0;
+}
+
+.article__previews {
+  border: 1px solid rgb(0,0,0);
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+}
+
+.article__headshot {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px
+}
+
+.article__content {
+  padding: 0 20px;
+}
+
+.footer {
+  border-top: 1px solid rgb(0, 0, 0);
+  height: 5vh;
+  padding: 20px 30px;
+  width: 100vw;
+}
+
+.footer__aboutUs, .footer__socialMedia {
+  display: inline-block;
+  width: 50%;
+}
+
+.footer__heading {
+  margin: 0;
+}
+
+.footer__socialMedia {
+  text-align: right;
+}
+
+.footer__socialMediaLink {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+}
+
+.footer__socialMediaLink:nth-child(2) {
+  margin: 0 10px;
 }
