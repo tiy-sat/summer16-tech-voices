@@ -10,6 +10,42 @@ body {
   margin: 0;
 }
 
+/*
+  Nav Styling
+*/
+
+.nav {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  border-bottom: 1px solid black;
+  height: 5rem;
+  margin-bottom: 2rem;
+  width: 8rem;
+}
+
+.nav__link {
+  color: black;
+  letter-spacing: .2rem;
+  margin: 0 10rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.googleSignUp {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}
+
+/*
+  Main Page Styling
+*/
+
 .main__banner {
   background-image: url("http://www.thesanantonioriverwalk.com/images/site/home_night_banner.jpg");
   background-size: cover;
@@ -86,4 +122,4 @@ body {
 
 .footer__socialMediaLink:nth-child(2) {
   margin: 0 10px;
-  }
+}
