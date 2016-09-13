@@ -20,6 +20,8 @@
   - Possible scrolling behavior
   - AJAX request are shorter, and browsers compatible
 
+1. SimpleMDE
+  - Markdown editor for textarea on the create blog post page
 ### Services
 1. tiny-tiny
   - Quick Database as a service
