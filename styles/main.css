@@ -113,13 +113,18 @@ body {
 }
 
 .article__list {
+  background-color: rgb(245, 245, 245);
   padding: 3rem 0;
 }
 
 .article__previews {
-  border: .1rem solid rgb(0,0,0);
+  background-color: white;
+  border: .1rem solid rgba(0,0,0, 0.2);
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
   height: 16rem;
-  margin: 2rem auto;
+  margin: 3rem auto;
+  overflow: hidden;
   width: 60%;
 }
 
@@ -137,21 +142,21 @@ body {
   width: 16rem;
 }
 
-.headshotOverlay__details {
-  display: inline-block;
-  height: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
-  width: 100%;
-}
-
 .article__headshotOverlay {
   background-color: rgba(236, 141, 35, 0.7);
   position: absolute;
   height: 100%;
   left: -100%;
   top: 0;
+  width: 100%;
+}
+
+.headshotOverlay__details {
+  display: inline-block;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -191,8 +196,7 @@ body {
 }
 
 .footer {
-  border-top: .1rem solid rgb(0, 0, 0);
-  height: 5vh;
+  background-color: rgb(180, 180, 180);
   padding: 2rem 3rem;
   width: 100vw;
 }
@@ -203,18 +207,23 @@ body {
 }
 
 .footer__heading {
+  font-size: 2rem;
   margin: 0;
 }
 
+.footer__aboutText {
+  font-size: 1.2rem;
+}
+
 .footer__socialMedia {
+  padding: 2% 0;
   text-align: right;
+  vertical-align: top;
 }
 
 .footer__socialMediaLink {
-  background-color: rgb(158, 160, 163);
-  border-radius: 50%;
+  color: white;
   display: inline-block;
-  height: 4.5rem;
   width: 4.5rem;
 }
 
