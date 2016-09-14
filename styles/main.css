@@ -7,33 +7,47 @@
 
 body {
   font-family: helvetica, sans-serif;
+  /*adjust font size to calibrate for rem*/
+  font-size: 62.5%;
   margin: 0;
 }
 
 /*
   Nav Styling
 */
+.nav__wrapper {
+  width: 100vw;
+}
 
 .nav {
   background-color: white;
   border-bottom: 1px solid black;
+  height: 70px;
+  margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  width: 100%;
+  width: 70%;
+}
+.nav__logo, .nav__links {
+  display: inline-block;
+  width: 50%;
 }
 
 .nav__link {
   color: black;
   letter-spacing: .2rem;
-  margin: 0 10rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+.nav__link:nth-child(2) {
+  margin: 0 20px;
+}
+
 .googleSignUp {
-  position: absolute;
+  /*position: absolute;
   right: 3rem;
-  top: 1rem;
+  top: 1rem;*/
 }
 
 /*
@@ -163,6 +177,10 @@ body {
   margin: 20px 0;
   padding: 20px;
 }
+
+/*
+ New Article
+*/
 
 .newArticle__authorpic {
   background-color: rgb(158, 160, 163);
