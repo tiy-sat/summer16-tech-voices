@@ -79,7 +79,7 @@ body {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
   height: 45px;
-  width: 45px
+  width: 45px;
 }
 
 .article__content {
@@ -140,7 +140,7 @@ body {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
   height: 100px;
-  width: 100px
+  width: 100px;
 }
 
 .article__author {
@@ -162,4 +162,16 @@ body {
   border: 1px solid rgb(0,0,0);
   margin: 20px 0;
   padding: 20px;
+}
+
+.newArticle__authorpic {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+}
+
+.editorContainer {
+  width: 80%;
+  margin: auto;
 }
