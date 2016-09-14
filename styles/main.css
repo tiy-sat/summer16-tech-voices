@@ -1,3 +1,12 @@
+
+/*
+  COLORS
+  sa yellow: rgb(236, 141, 35);
+  sa pink: rgb(239, 90, 109);
+  sa teal: rgb(1, 163, 165);
+*/
+
+
 /*
   Main Stylesheet
 */
@@ -109,24 +118,80 @@ body {
 
 .article__previews {
   border: .1rem solid rgb(0,0,0);
+  height: 16rem;
   margin: 2rem auto;
-  padding: 2rem;
   width: 60%;
 }
 
 .article__headshot {
   background-color: rgb(158, 160, 163);
-  border-radius: 50%;
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 100%;
+  width: 100%;
 }
 
-.article__content {
+.article__headshotContainer {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 30%;
+}
+
+.headshotOverlay__details {
+  display: inline-block;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.article__headshotOverlay {
+  background-color: rgba(236, 141, 35, 0.7);
+  position: absolute;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  width: 100%;
+}
+
+.headshotOverlay__item {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.article__snippet {
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  vertical-align: top;
+  width: 70%;
+
+}
+
+.article__title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.article__blurb {
+  line-height: 1.25rem;
   padding: 0 2rem;
+  overflow: hidden;
+}
+
+.article__readMore {
+  color: rgb(1, 163, 165);
+  bottom: 2rem;
+  right: 4rem;
+  position: absolute;
+  text-decoration: none;
 }
 
 .footer {
-  border-top: 1px solid rgb(0, 0, 0);
+  border-top: .1rem solid rgb(0, 0, 0);
   height: 5vh;
   padding: 2rem 3rem;
   width: 100vw;
