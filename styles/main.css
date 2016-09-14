@@ -1,3 +1,12 @@
+
+/*
+  COLORS
+  sa yellow: rgb(236, 141, 35);
+  sa pink: rgb(239, 90, 109);
+  sa teal: rgb(1, 163, 165);
+*/
+
+
 /*
   Main Stylesheet
 */
@@ -5,10 +14,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: helvetica, sans-serif;
   /*adjust font size to calibrate for rem*/
-  font-size: 62.5%;
   margin: 0;
 }
 
@@ -21,34 +33,56 @@ body {
 
 .nav {
   background-color: white;
-  border-bottom: 1px solid black;
-  height: 70px;
+  height: 7rem;
   margin: 0 auto;
   padding: 1rem;
+  position: relative;
   text-align: center;
   width: 70%;
+
 }
 .nav__logo, .nav__links {
   display: inline-block;
+  line-height: 5rem;
+  height: 100%;
   width: 50%;
+}
+
+.nav__links {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1rem;
 }
 
 .nav__link {
   color: black;
+  display: inline-block;
   letter-spacing: .2rem;
+  height: 3.85rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+.nav__link:hover {
+  border-bottom: .2rem solid black;
+}
+
+.nav__link--selected {
+}
+
 .nav__link:nth-child(2) {
-  margin: 0 20px;
+  margin: 0 2rem;
 }
 
 .googleSignUp {
-  /*position: absolute;
-  right: 3rem;
-  top: 1rem;*/
+  background-color: rgb(223, 74, 50);
+  border: 0;
+  border-radius: .4rem;
+  color: white;
+  font-size: 1.6rem;
+  padding: .6rem;
 }
+
 
 /*
   Main Page Styling
@@ -57,7 +91,7 @@ body {
 .main__banner {
   background-image: url("http://www.thesanantonioriverwalk.com/images/site/home_night_banner.jpg");
   background-size: cover;
-  height: 400px;
+  height: 40rem;
   position: relative;
 }
 
@@ -79,31 +113,87 @@ body {
 }
 
 .article__list {
-  padding: 30px 0;
+  padding: 3rem 0;
 }
 
 .article__previews {
-  border: 1px solid rgb(0,0,0);
-  margin: 20px auto;
-  padding: 20px;
+  border: .1rem solid rgb(0,0,0);
+  height: 16rem;
+  margin: 2rem auto;
   width: 60%;
 }
 
 .article__headshot {
   background-color: rgb(158, 160, 163);
-  border-radius: 50%;
-  height: 45px;
-  width: 45px;
+  height: 100%;
+  width: 100%;
 }
 
-.article__content {
-  padding: 0 20px;
+.article__headshotContainer {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 16rem;
+}
+
+.headshotOverlay__details {
+  display: inline-block;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.article__headshotOverlay {
+  background-color: rgba(236, 141, 35, 0.7);
+  position: absolute;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  width: 100%;
+}
+
+.headshotOverlay__item {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.article__snippet {
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  vertical-align: top;
+  width: 70%;
+
+}
+
+.article__title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.article__blurb {
+  line-height: 1.25rem;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.article__readMore {
+  color: rgb(1, 163, 165);
+  bottom: 2rem;
+  right: 4rem;
+  position: absolute;
+  text-decoration: none;
 }
 
 .footer {
-  border-top: 1px solid rgb(0, 0, 0);
+  border-top: .1rem solid rgb(0, 0, 0);
   height: 5vh;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
   width: 100vw;
 }
 
@@ -124,12 +214,12 @@ body {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
   display: inline-block;
-  height: 45px;
-  width: 45px;
+  height: 4.5rem;
+  width: 4.5rem;
 }
 
 .footer__socialMediaLink:nth-child(2) {
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
 
@@ -138,44 +228,44 @@ body {
 */
 
 .articleContainer {
-  margin: 20px auto;
-  padding: 20px;
+  margin: 2rem auto;
+  padding: 2rem;
   position: relative;
   width: 60%;
 }
 
 .article__header {
-  border: 1px solid rgb(0,0,0);
-  margin: 20px 0;
-  padding: 20px 100px;
+  border: .1rem solid rgb(0,0,0);
+  margin: 2rem 0;
+  padding: 2rem 10rem;
 }
 
 .article__authorHeadshot {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 10rem;
+  width: 10rem;
 }
 
 .article__author {
   display: inline-block;
-  font-size: 40px;
+  font-size: 4rem;
   margin: 0;
   position: absolute;
-  left: 350px;
-  top: 65px;
+  left: 35rem;
+  top: 6.5rem;
   vertical-align: top;
 }
 .article__timestamp {
   position: absolute;
-  left: 350px;
-  top: 130px;
+  left: 35rem;
+  top: 13rem;
 }
 
 .article {
-  border: 1px solid rgb(0,0,0);
-  margin: 20px 0;
-  padding: 20px;
+  border: .1rem solid rgb(0,0,0);
+  margin: 2rem 0;
+  padding: 2rem;
 }
 
 /*
@@ -185,8 +275,8 @@ body {
 .newArticle__authorpic {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
-  height: 65px;
-  width: 65px;
+  height: 6.5rem;
+  width: 6.5rem;
 }
 
 .editorContainer {
