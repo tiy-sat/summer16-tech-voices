@@ -89,7 +89,12 @@ body {
   border-radius: .4rem;
   color: white;
   font-size: 1.6rem;
+  outline: 0;
   padding: .6rem;
+}
+
+.googleSignUp:hover {
+  cursor: pointer;
 }
 
 
@@ -290,6 +295,15 @@ body {
  New Article
 */
 
+.editorContainer {
+  width: 60%;
+  margin: auto;
+}
+
+.newArticle__header {
+  letter-spacing: .2rem;
+}
+
 .newArticle__authorpic {
   background-color: rgb(158, 160, 163);
   border-radius: 50%;
@@ -297,7 +311,72 @@ body {
   width: 6.5rem;
 }
 
-.editorContainer {
-  width: 80%;
-  margin: auto;
+.newArticle__author {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.editor {
+  letter-spacing: .2rem;
+}
+
+.editor__titleInput {
+  border: 0;
+  font-family: bebas-neue;
+  font-size: 4rem;
+  letter-spacing: .2rem;
+  margin: 2rem 0;
+  outline: 0;
+  width: 100%;
+}
+
+.editor__titleInput:focus {
+  border-bottom: .2rem solid rgb(236, 141, 35);
+}
+
+.editor__imageInput {
+  border: 0;
+  font-family: bebas-neue;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  margin-bottom: 2rem;
+  outline: 0;
+  width: 100%;
+}
+
+.editor__imageInput:focus {
+  border-bottom: .2rem solid rgb(1, 163, 165);
+}
+
+.mdeContainer {
+  border-radius: 4px;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
+  font-size: 2rem;
+}
+
+.newArticle__footer {
+  text-align: right;
+}
+
+.editor__submit {
+  background-color: white;
+  border: 0;
+  border-radius: .4rem;
+  font-family: bebas-neue;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  margin: 2rem;
+  outline: 0;
+  padding: 1rem;
+  transition: background-color .6s;
+}
+
+.editor__submit:hover {
+  background-color: rgb(239, 90, 109);
+  color: white;
+  cursor: pointer;
+  transition: background-color .6s;
+
 }
