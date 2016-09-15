@@ -52,7 +52,6 @@ body {
 }
 .nav__logo, .nav__links {
   display: inline-block;
-  line-height: 10rem;
   height: 100%;
   width: 50%;
 }
@@ -72,7 +71,8 @@ body {
   color: black;
   display: inline-block;
   letter-spacing: .2rem;
-  height: 3.85rem;
+  line-height: 10rem;
+  height: 6.2rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -204,7 +204,9 @@ body {
 }
 
 .article__blurb {
-  line-height: 1.25rem;
+  font-family: helvetica;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
   padding: 0 2rem;
   overflow: hidden;
 }
