@@ -123,6 +123,8 @@ body {
 .main__bannerText {
   color: rgb(245, 245, 245);
   display: inline-block;
+  font-size: 3rem;
+  opacity: .8;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -258,15 +260,14 @@ body {
 
 .articleContainer {
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   width: 60%;
 }
 
 .article__header {
-  border: .1rem solid rgb(0,0,0);
   margin: 2rem 0;
-  padding: 2rem 10rem;
+  padding: 2rem;
 }
 
 .article__authorHeadshot {
@@ -278,25 +279,37 @@ body {
 
 .article__author {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 3rem;
+  letter-spacing: .2rem;
   margin: 0;
+  padding: .7rem;
   position: absolute;
-  left: 35rem;
-  top: 6.5rem;
   vertical-align: top;
 }
+
 .article__timestamp {
-  position: absolute;
-  left: 35rem;
-  top: 13rem;
+  font-size: 1.5rem;
+  color: rgb(117, 117, 117);
+  letter-spacing: .2rem;
+  padding: .7rem;
+  position: relative;
 }
 
 .article {
-  border: .1rem solid rgb(0,0,0);
+  line-height: 3.3rem;
+  padding: 1rem;
   margin: 2rem 0;
-  padding: 2rem;
 }
 
+.article__contentTitle {
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+}
+
+.article__content {
+  font-size: 2rem;
+  font-family: helvetica;
+}
 /*
  New Article
 */
