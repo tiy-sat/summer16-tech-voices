@@ -30,13 +30,14 @@ body {
 /*
   Nav Styling
 */
+
 .nav__wrapper {
   width: 100vw;
 }
 
 .nav {
   background-color: white;
-  height: 7rem;
+  height: 12rem;
   margin: 0 auto;
   padding: 1rem;
   position: relative;
@@ -46,9 +47,14 @@ body {
 }
 .nav__logo, .nav__links {
   display: inline-block;
-  line-height: 5rem;
+  line-height: 10rem;
   height: 100%;
   width: 50%;
+}
+
+.nav__linkLogo {
+  height: 10rem;
+  width: 10rem;
 }
 
 .nav__links {
