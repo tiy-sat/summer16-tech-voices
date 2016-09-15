@@ -302,8 +302,9 @@ body {
 */
 
 .editorContainer {
-  width: 60%;
   margin: auto;
+  padding-top: 10rem;
+  width: 60%;
 }
 
 .newArticle__header {
