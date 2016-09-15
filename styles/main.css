@@ -24,7 +24,7 @@ html {
 body {
   font-family: bebas-neue, helvetica, sans-serif;
   /*adjust font size to calibrate for rem*/
-  margin: 0;
+  margin: 12rem 0 0 0;
 }
 
 /*
@@ -32,11 +32,16 @@ body {
 */
 
 .nav__wrapper {
+  background-color: white;
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
   width: 100vw;
+  z-index: 100000;
 }
 
 .nav {
-  background-color: white;
   height: 12rem;
   margin: 0 auto;
   padding: 1rem;
@@ -310,8 +315,9 @@ body {
 */
 
 .editorContainer {
-  width: 60%;
   margin: auto;
+  padding-top: 10rem;
+  width: 60%;
 }
 
 .newArticle__header {
@@ -365,7 +371,7 @@ body {
 }
 
 .mdeContainer {
-  border-radius: 4px;
+  border-radius: .4rem;
   box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
   font-size: 2rem;
 }
