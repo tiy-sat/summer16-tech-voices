@@ -387,17 +387,16 @@ body {
 }
 
 .editor__titleInput {
-  border: 0;
+  border: .1rem solid lightgrey;
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
   font-family: bebas-neue;
   font-size: 4rem;
   letter-spacing: .2rem;
   margin: 2rem 0;
   outline: 0;
+  padding-left: 1rem;
   width: 100%;
-}
-
-.editor__titleInput:focus {
-  border-bottom: .2rem solid rgb(236, 141, 35);
 }
 
 .editor__imageInput {
