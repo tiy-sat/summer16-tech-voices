@@ -266,6 +266,8 @@ body {
 }
 
 .footer__signOut {
+  /*bottom: 0;
+  left: 20rem;*/
   display: none;
 }
 
