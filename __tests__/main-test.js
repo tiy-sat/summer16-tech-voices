@@ -29,7 +29,27 @@ describe("Main", () => {
     })
     // I want this to find an article
     let articleEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"article__previews")
-    console.log(articleEl);
     expect(articleEl).toBeDefined()
+  })
+
+  it("should have a footer", () => {
+    let mainRendered = TestUtils.renderIntoDocument(
+      <Main/>
+    )
+    let footerEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer")
+  })
+
+  it("should have an about us in the footer", () => {
+    let mainRendered = TestUtils.renderIntoDocument(
+      <Main/>
+    )
+    let aboutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__aboutUs" )
+  })
+
+  it("should have an log out link in the footer", () => {
+    let mainRendered = TestUtils.renderIntoDocument(
+      <Main/>
+    )
+    let logoutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__signOut" )
   })
 })
