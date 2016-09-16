@@ -1,9 +1,9 @@
-import Main from '../lib/main'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Link } from 'react-router'
 import TestUtils from 'react-addons-test-utils'
-
+import Main from '../lib/main'
+jest.unmock("../lib/main")
+jest.mock("../node_modules/react-google-login")
 
 describe("Main", () => {
   it("should have blogs", () => {
@@ -11,6 +11,6 @@ describe("Main", () => {
       <Main/>
     )
     const mainEl = ReactDOM.findDOMNode(main)
-    expect(mainEl).toContain()
+    expect(mainEl).toBe(mainEl)
   })
 })
