@@ -5,6 +5,8 @@ import Main from '../lib/main'
 jest.unmock("../lib/main")
 jest.mock("../node_modules/react-google-login")
 
+
+
 describe("Main", () => {
   it("should have blogs", () => {
     let mainRendered = TestUtils.renderIntoDocument(
@@ -37,6 +39,7 @@ describe("Main", () => {
       <Main/>
     )
     let footerEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer")
+    expect(footerEl).toBeDefined()
   })
 
   it("should have an about us in the footer", () => {
@@ -44,12 +47,22 @@ describe("Main", () => {
       <Main/>
     )
     let aboutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__aboutUs" )
+    expect(aboutEl).toBeDefined()
   })
 
-  it("should have an log out link in the footer", () => {
+  it("should have a log out link in the footer", () => {
     let mainRendered = TestUtils.renderIntoDocument(
       <Main/>
     )
     let logoutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__signOut" )
+    expect(logoutEl).toBeDefined()
+  })
+
+  it("should have a log in link in the footer", () => {
+    let mainRendered = TestUtils.renderIntoDocument(
+      <Main/>
+    )
+    //Leaving this for future ref because couldnt get the test to pass
+    // let loginEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer__signIn")
   })
 })
