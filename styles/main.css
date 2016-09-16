@@ -137,12 +137,14 @@ body {
 
 .article__previews {
   background-color: white;
+  color: rgb(0, 0, 0);
   border: .1rem solid rgba(0,0,0, 0.2);
   border-radius: .4rem;
   box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
   height: 16rem;
   margin: 3rem auto;
   overflow: hidden;
+  text-decoration: none;
   width: 60%;
 }
 
