@@ -80,9 +80,6 @@ body {
   border-bottom: .2rem solid black;
 }
 
-.nav__link--selected {
-}
-
 .nav__link:nth-child(2) {
   margin: 0 2rem;
 }
@@ -206,6 +203,7 @@ body {
 .article__blurb {
   font-family: helvetica;
   font-size: 1.4rem;
+  height: 7.5rem;
   line-height: 1.5rem;
   padding: 0 2rem;
   overflow: hidden;
@@ -396,16 +394,6 @@ body {
   margin: 2rem 0;
   outline: 0;
   padding-left: 1rem;
-  width: 100%;
-}
-
-.editor__imageInput {
-  border: 0;
-  font-family: bebas-neue;
-  font-size: 2rem;
-  letter-spacing: .2rem;
-  margin-bottom: 2rem;
-  outline: 0;
   width: 100%;
 }
 
