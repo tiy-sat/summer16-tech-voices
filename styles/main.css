@@ -129,7 +129,12 @@ body {
 
 .article__list {
   background-color: rgb(245, 245, 245);
-  padding: 3rem 0;
+  padding: 3rem 25%;
+}
+
+.article__link {
+  display: inline-block;
+  width: 100%;
 }
 
 .article__previews {
@@ -142,7 +147,6 @@ body {
   margin: 3rem auto;
   overflow: hidden;
   text-decoration: none;
-  width: 60%;
 }
 
 .article__headshot {
@@ -211,8 +215,8 @@ body {
 
 .article__readMore {
   color: rgb(1, 163, 165);
-  bottom: 2rem;
-  right: 4rem;
+  bottom: 0;
+  right: 0;
   position: absolute;
   text-decoration: none;
 }
@@ -266,8 +270,7 @@ body {
 }
 
 .footer__signOut {
-  bottom: 0;
-  left: 20rem;
+  display: none;
 }
 
 .footer__signIn:hover, .footer__signOut:hover {
