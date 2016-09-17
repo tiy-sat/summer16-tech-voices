@@ -13,12 +13,12 @@ describe("Nav", () => {
     expect(logoEl).toBeDefined()
   })
 
-  it("should have an about us link"), () => {
+  it("should have an about us link", () => {
     let navRendered = TestUtils.renderIntoDocument(
       <Nav/>
     )
     let aboutUsEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__linkAboutUs")
-  }
+  })
 
   it("should link to about us", () => {
     let navRendered = TestUtils.renderIntoDocument(

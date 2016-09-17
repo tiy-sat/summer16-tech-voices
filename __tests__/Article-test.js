@@ -6,11 +6,20 @@ jest.unmock("../lib/Article")
 
 describe("Article", () => {
   it("should have article post", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
+    let articleRendered = TestUtils.renderIntoDocument(
+      <Article params={"articleID: 123"}/>
     )
-    // fake state for blogPosts
-    mainRendered.setState({
+
+    let articleEl = TestUtils.findRenderedDOMComponentWithClass(articleRendered, "articleContainer")
+    expect(articleEl).toBeDefined()
+  })
+
+  it("should have a title", () => {
+    let articleRendered = TestUtils.renderIntoDocument(
+      <Article params={"articleID: 123"}/>
+    )
+    // fake state for blogPost
+    articleRendered.setState({
       blogData: {
         _id: "1738",
         author: "Fetty",
@@ -24,5 +33,8 @@ describe("Article", () => {
         }
       }
     })
+
+    let titleEl = TestUtils.findRenderedDOMComponentWithClass(articleRendered, "article__contentTitle")
+    expect(titleEl.value).toBe("moms spaghetti")
   })
 })
