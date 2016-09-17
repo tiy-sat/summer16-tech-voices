@@ -4,6 +4,7 @@ import TestUtils from 'react-addons-test-utils'
 import Nav from '../lib/Nav'
 jest.unmock("../lib/Nav")
 
+
 describe("Nav", () => {
   it("should have a logo", () => {
     let navRendered = TestUtils.renderIntoDocument(
