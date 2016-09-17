@@ -12,4 +12,12 @@ describe("Nav", () => {
     let logoEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__linkLogo")
     expect(logoEl).toBeDefined()
   })
+
+  it("should link to about us", () => {
+    let navRendered = TestUtils.renderIntoDocument(
+      <Nav/>
+    )
+    let a = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__link about")
+    expect(a.getAttribute("href")).toEqual("#aboutUs")
+  })
 })
