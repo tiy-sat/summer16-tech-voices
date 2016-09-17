@@ -18,10 +18,11 @@ describe("Nav", () => {
     )
     let aboutUsEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__linkAboutUs")
   }
-  it("should have a create link", () =>
+  it("should have a create link", () => {
     let navRendered =   TestUtils.renderIntoDocument(
     <Nav/>
     )
     let createEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__linkCreate")
+    }  
   )
 })
