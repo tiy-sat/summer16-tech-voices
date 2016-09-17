@@ -86,7 +86,7 @@ describe("Article", () => {
     expect(dateEl.textContent).toBe(articleRendered.state.blogData.timeStamp)
   })
 
-  it("should have author", () => {
+  it("should have user name", () => {
     let articleRendered = TestUtils.renderIntoDocument(
       <Article params={"articleID: 123"}/>
     )
@@ -130,7 +130,7 @@ describe("Article", () => {
       }
     })
 
-    let pictureEl = TestUtils.findRenderedDOMComponentWithClass(articleRendered, "article__headshotContainer")
-    expect(pictureEl.textContent).toBe(articleRendered.state.blogData.user_info.user_imgSrc)
+    let pictureEl = TestUtils.findRenderedDOMComponentWithClass(articleRendered, "article__authorHeadshot")
+    expect(pictureEl.getAttribute("src")).toEqual(articleRendered.state.blogData.user_info.user_imgSrc)
   })
 })
