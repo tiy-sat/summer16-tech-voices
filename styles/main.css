@@ -215,8 +215,8 @@ body {
 
 .article__readMore {
   color: rgb(1, 163, 165);
-  bottom: 2rem;
-  right: 4rem;
+  bottom: 0;
+  right: 0;
   position: absolute;
   text-decoration: none;
 }
