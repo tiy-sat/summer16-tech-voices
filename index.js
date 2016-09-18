@@ -5,12 +5,14 @@ import Nav from './lib/Nav'
 import Main from './lib/Main'
 import NewArticle from './lib/NewArticle'
 import Article from './lib/Article'
+import EditArticle from './lib/EditArticle'
 
 render((
   <Router history={ hashHistory }>
     <Route path="/nav" component={ Nav }>
       <Route path="/" component={ Main }/>
       <Route path="/new-article/:userID" component={ NewArticle }/>
+      <Route path="/edit-article/:articleID" component={ EditArticle } />
       <Route path="/article/:articleID" component={ Article }/>
     </Route>
   </Router>
