@@ -249,7 +249,7 @@ body {
 }
 
 
-.footer__signIn, .footer__signOut {
+.footer__signIn, .footer__signOut, .footer__linkCreate {
   appearance: normal;
   -webkit-appearance: normal;
   background-color: rgb(219, 50, 54);
@@ -273,7 +273,13 @@ body {
   display: none;
 }
 
-.footer__signIn:hover, .footer__signOut:hover {
+.footer__linkCreate {
+  display: none;
+  position: absolute;
+  left: 20rem;
+}
+
+.footer__signIn:hover, .footer__signOut:hover, .footer__linkCreate:hover {
   background-color: rgb(255, 255, 255);
   cursor: pointer;
   color: rgb(219, 50, 54);
