@@ -31,11 +31,29 @@ describe("Main", () => {
     expect(articleEl).toBeDefined()
   })
 
-  it("should have a log in link in the footer", () => {
+  it("sould link to specific article", () => {
     let mainRendered = TestUtils.renderIntoDocument(
       <Main/>
     )
-    //Leaving this for future ref because couldnt get the test to pass
-    // let loginEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer__signIn")
+    mainRendered.setState({
+      blogPosts: [
+         {
+          _id: "1738",
+          author: "Fetty",
+          timeStamp: "2016.09.16",
+          content: "Lorem",
+          title: "moms spaghetti",
+          user_info: {
+            user_id: "679",
+            user_name: "remys boys",
+            user_imgSrc: "remyboys.jpeg"
+          }
+        }
+      ]
+    })
+
+    let articleEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "article__link")
+    expect(articleEl.getAttribute("href")).toBe("#/article/1738")
   })
+
 })
