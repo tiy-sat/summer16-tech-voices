@@ -4,7 +4,6 @@ import TestUtils from 'react-addons-test-utils'
 import Main from '../lib/main'
 
 
-
 describe("Main", () => {
   it("should have blogs", () => {
     let mainRendered = TestUtils.renderIntoDocument(

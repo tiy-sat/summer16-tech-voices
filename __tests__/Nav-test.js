@@ -5,6 +5,7 @@ import Nav from '../lib/Nav'
 jest.mock("../node_modules/react-google-login")
 
 
+
 describe("Nav", () => {
   it("should have a logo", () => {
     let navRendered = TestUtils.renderIntoDocument(
@@ -19,7 +20,6 @@ describe("Nav", () => {
       <Nav/>
     )
     let aboutUsEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "nav__linkAboutUs nav__link")
-    expect(aboutUsEl).toBeDefined()
   })
 
   it("should link to about us", () => {
@@ -30,8 +30,8 @@ describe("Nav", () => {
     expect(a.getAttribute("href")).toEqual("#aboutUs")
   })
 
-  it("should link to current user create", () => {
-    let navRendered =   TestUtils.renderIntoDocument(
+  it("should have a create link", () => {
+    let navRendered = TestUtils.renderIntoDocument(
     <Nav/>
     )
     navRendered.setState({
