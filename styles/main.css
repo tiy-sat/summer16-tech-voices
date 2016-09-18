@@ -77,7 +77,7 @@ body {
 }
 
 .nav__link:hover {
-  border-bottom: .2rem solid black;
+  border-bottom: .2rem solid rgb(239, 90, 109);
 }
 
 .nav__link:nth-child(2) {
@@ -92,6 +92,8 @@ body {
 .main__banner {
   background-image: url("http://www.thesanantonioriverwalk.com/images/site/home_night_banner.jpg");
   background-size: cover;
+  border-bottom: .3rem solid rgb(1, 163, 165);
+  border-top: .3rem solid rgb(1, 163, 165);
   height: 40rem;
   position: relative;
 }
@@ -219,6 +221,13 @@ body {
   right: 0;
   position: absolute;
   text-decoration: none;
+  transition: letter-spacing 0.6s;
+}
+
+.article__readMore:hover {
+  color: rgb(239, 90, 109);
+  letter-spacing: .3rem;
+  transition: letter-spacing 0.6s;
 }
 
 .footer {
