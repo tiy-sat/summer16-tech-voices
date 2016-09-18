@@ -2,8 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
 import Main from '../lib/main'
-jest.mock("../node_modules/react-google-login")
-
 
 
 describe("Main", () => {
@@ -31,30 +29,6 @@ describe("Main", () => {
     // I want this to find an article
     let articleEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"article__previews")
     expect(articleEl).toBeDefined()
-  })
-
-  it("should have a footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let footerEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer")
-    expect(footerEl).toBeDefined()
-  })
-
-  it("should have an about us in the footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let aboutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__aboutUs" )
-    expect(aboutEl).toBeDefined()
-  })
-
-  it("should have a log out link in the footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let logoutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__signOut" )
-    expect(logoutEl).toBeDefined()
   })
 
   it("should have a log in link in the footer", () => {
