@@ -40,4 +40,28 @@ describe("Nav", () => {
     let createEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "footer__linkCreate")
     expect(createEl.getAttribute("href")).toEqual("#/new-article/123123")
   })
+
+  it("should have a footer", () => {
+    let navRendered = TestUtils.renderIntoDocument(
+      <Nav/>
+    )
+    let footerEl = TestUtils.findRenderedDOMComponentWithClass(navRendered, "footer")
+    expect(footerEl).toBeDefined()
+  })
+
+  it("should have an about us in the footer", () => {
+    let navRendered = TestUtils.renderIntoDocument(
+      <Nav/>
+    )
+    let aboutEl = TestUtils.findRenderedDOMComponentWithClass(navRendered,"footer__aboutUs" )
+    expect(aboutEl).toBeDefined()
+  })
+
+  it("should have a log out link in the footer", () => {
+    let navRendered = TestUtils.renderIntoDocument(
+      <Nav/>
+    )
+    let logoutEl = TestUtils.findRenderedDOMComponentWithClass(navRendered,"footer__signOut" )
+    expect(logoutEl).toBeDefined()
+  })
 })

@@ -32,30 +32,6 @@ describe("Main", () => {
     expect(articleEl).toBeDefined()
   })
 
-  it("should have a footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let footerEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered, "footer")
-    expect(footerEl).toBeDefined()
-  })
-
-  it("should have an about us in the footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let aboutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__aboutUs" )
-    expect(aboutEl).toBeDefined()
-  })
-
-  it("should have a log out link in the footer", () => {
-    let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
-    )
-    let logoutEl = TestUtils.findRenderedDOMComponentWithClass(mainRendered,"footer__signOut" )
-    expect(logoutEl).toBeDefined()
-  })
-
   it("should have a log in link in the footer", () => {
     let mainRendered = TestUtils.renderIntoDocument(
       <Main/>
