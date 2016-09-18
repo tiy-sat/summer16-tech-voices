@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
 import Article from '../lib/Article'
-jest.unmock("../lib/Article")
 
 describe("Article", () => {
   it("should have article post", () => {
