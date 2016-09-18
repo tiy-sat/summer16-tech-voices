@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
 import Main from '../lib/main'
+jest.mock("../node_modules/react-google-login")
 
 
 
