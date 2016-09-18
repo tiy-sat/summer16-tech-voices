@@ -425,12 +425,14 @@ body {
   background-color: white;
   border: 0;
   border-radius: .4rem;
+  color: rgb(239, 90, 109);
   font-family: bebas-neue;
   font-size: 2rem;
   letter-spacing: .2rem;
   margin: 2rem;
   outline: 0;
   padding: 1rem;
+  text-decoration: none;
   transition: background-color .6s;
 }
 
