@@ -58,9 +58,9 @@
 	
 	var _Nav2 = _interopRequireDefault(_Nav);
 	
-	var _Main = __webpack_require__(238);
+	var _Home = __webpack_require__(238);
 	
-	var _Main2 = _interopRequireDefault(_Main);
+	var _Home2 = _interopRequireDefault(_Home);
 	
 	var _NewArticle = __webpack_require__(239);
 	
@@ -82,7 +82,7 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/nav', component: _Nav2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Main2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/new-article/:userID', component: _NewArticle2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/edit-article/:articleID', component: _EditArticle2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/article/:articleID', component: _Article2.default })
@@ -37418,7 +37418,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _react2.default.createClass({
-	  displayName: 'Main',
+	  displayName: 'Home',
 	  getInitialState: function getInitialState() {
 	    return {
 	      blogPosts: [],
