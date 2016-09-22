@@ -58,19 +58,19 @@
 	
 	var _Nav2 = _interopRequireDefault(_Nav);
 	
-	var _Main = __webpack_require__(239);
+	var _Main = __webpack_require__(238);
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
-	var _NewArticle = __webpack_require__(240);
+	var _NewArticle = __webpack_require__(239);
 	
 	var _NewArticle2 = _interopRequireDefault(_NewArticle);
 	
-	var _Article = __webpack_require__(241);
+	var _Article = __webpack_require__(240);
 	
 	var _Article2 = _interopRequireDefault(_Article);
 	
-	var _EditArticle = __webpack_require__(242);
+	var _EditArticle = __webpack_require__(241);
 	
 	var _EditArticle2 = _interopRequireDefault(_EditArticle);
 	
@@ -27126,17 +27126,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _main = __webpack_require__(236);
-	
-	var _main2 = _interopRequireDefault(_main);
-	
 	var _reactRouter = __webpack_require__(172);
 	
-	var _jquery = __webpack_require__(237);
+	var _jquery = __webpack_require__(236);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _reactGoogleLogin = __webpack_require__(238);
+	var _reactGoogleLogin = __webpack_require__(237);
 	
 	var _reactGoogleLogin2 = _interopRequireDefault(_reactGoogleLogin);
 	
@@ -27314,151 +27310,6 @@
 
 /***/ },
 /* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(172);
-	
-	var _jquery = __webpack_require__(237);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'main',
-	  getInitialState: function getInitialState() {
-	    return {
-	      blogPosts: [],
-	      tokenId: ""
-	    };
-	  },
-	  getBlogPosts: function getBlogPosts() {
-	    var _this = this;
-	
-	    _jquery2.default.get("https://tiny-tiny.herokuapp.com/collections/sa_tech_voices_test10", function (response) {
-	      _this.setState({
-	        blogPosts: response
-	      });
-	    });
-	  },
-	  onMouseEnterHandler: function onMouseEnterHandler(e) {
-	    var hiddenDetailEl = e.currentTarget.children[0].children[1];
-	
-	    (0, _jquery2.default)(hiddenDetailEl).slideDown(400);
-	  },
-	  onMouseExitHandler: function onMouseExitHandler(e) {
-	    var hiddenDetailEl = e.currentTarget.children[0].children[1];
-	    (0, _jquery2.default)(hiddenDetailEl).slideUp(100);
-	  },
-	  componentWillMount: function componentWillMount() {
-	    var _this2 = this;
-	
-	    this.getBlogPosts();
-	    window.setInterval(function () {
-	      _this2.getBlogPosts();
-	    }, 15000);
-	  },
-	  render: function render() {
-	    var _this3 = this;
-	
-	    var blogsArr = this.state.blogPosts;
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'header',
-	        { className: 'main__banner' },
-	        _react2.default.createElement('div', { className: 'main__bannerOverlay' }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'main__bannerText' },
-	          _react2.default.createElement(
-	            'h1',
-	            { className: 'main__bannerHeader' },
-	            'San Antonio Tech Voices'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'main__bannerSlogan' },
-	            '"perspectives from San Antonio tech" '
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'main',
-	        { className: 'article__list' },
-	        blogsArr.map(function (blog, i) {
-	          return _react2.default.createElement(
-	            'a',
-	            { href: '#/article/' + blog._id,
-	              className: 'article__link',
-	              key: i },
-	            _react2.default.createElement(
-	              'article',
-	              { className: 'article__previews',
-	                onMouseEnter: _this3.onMouseEnterHandler,
-	                onMouseLeave: _this3.onMouseExitHandler },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'article__headshotContainer' },
-	                _react2.default.createElement('img', { src: blog.user_info.user_imgSrc,
-	                  alt: 'headshot',
-	                  className: 'article__headshot' }),
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'article__headshotOverlay' },
-	                  _react2.default.createElement(
-	                    'ul',
-	                    { className: 'headshotOverlay__details' },
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'headshotOverlay__item' },
-	                      blog.user_info.user_name
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'headshotOverlay__item' },
-	                      blog.timeStamp
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'article__snippet' },
-	                _react2.default.createElement(
-	                  'h4',
-	                  { className: 'article__title' },
-	                  blog.title
-	                ),
-	                _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: ('' + blog.content).substring(0, 259) },
-	                  className: 'article__blurb' }),
-	                _react2.default.createElement(
-	                  'p',
-	                  { className: 'article__readMore' },
-	                  'Read More...'
-	                )
-	              )
-	            )
-	          );
-	        })
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -37538,14 +37389,14 @@
 
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	!function(e,t){ true?module.exports=t(__webpack_require__(1)):"function"==typeof define&&define.amd?define(["react"],t):"object"==typeof exports?exports.GoogleLogin=t(require("react")):e.GoogleLogin=t(e.react)}(this,function(e){return function(e){function t(n){if(o[n])return o[n].exports;var i=o[n]={exports:{},id:n,loaded:!1};return e[n].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var o={};return t.m=e,t.c=o,t.p="",t(0)}([function(e,t,o){e.exports=o(2)},function(e,t,o){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function s(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}(),c=o(3),l=n(c),u=function(e){function t(e){i(this,t);var o=r(this,Object.getPrototypeOf(t).call(this,e));return o.onBtnClick=o.onBtnClick.bind(o),o.state={disabled:"disabled"},o}return s(t,e),a(t,[{key:"componentDidMount",value:function(){var e=this,t=this.props,o=t.clientId,n=t.scope,i=t.cookiePolicy,r=t.loginHint,s=t.hostedDomain;!function(e,t,o,n){var i=e.getElementsByTagName(t)[0],r=i,s=i;s=e.createElement(t),s.id=o,s.src="//apis.google.com/js/client:platform.js",r.parentNode.insertBefore(s,r),s.onload=n}(document,"script","google-login",function(){var t={client_id:o,cookiepolicy:i,login_hint:r,hosted_domain:s,scope:n};window.gapi.load("auth2",function(){e.setState({disabled:""}),window.gapi.auth2.getAuthInstance()||window.gapi.auth2.init(t)})})}},{key:"onBtnClick",value:function(){var e=window.gapi.auth2.getAuthInstance(),t=this.props,o=t.offline,n=t.redirectUri,i=t.onSuccess,r=t.onFailure;if(o){var s={redirect_uri:n};e.grantOfflineAccess(s).then(function(e){i(e)},function(e){r(e)})}else e.signIn().then(function(e){var t=e.getBasicProfile(),o=e.getAuthResponse();e.googleId=t.getId(),e.tokenObj=o,e.tokenId=o.id_token,e.accessToken=o.access_token,e.profileObj={googleId:t.getId(),imageUrl:t.getImageUrl(),email:t.getEmail(),name:t.getName(),givenName:t.getGivenName(),familyName:t.getFamilyName()},i(e)},function(e){r(e)})}},{key:"render",value:function(){var e={display:"inline-block",background:"#d14836",color:"#fff",width:190,paddingTop:10,paddingBottom:10,borderRadius:2,border:"1px solid transparent",fontSize:16,fontWeight:"bold",fontFamily:"Roboto"},t=this.props,o=t.className,n=t.buttonText,i=t.children;return l["default"].createElement("button",{className:o,onClick:this.onBtnClick,style:o?{}:e,disabled:this.state.disabled},i?i:n)}}]),t}(c.Component);u.propTypes={onSuccess:c.PropTypes.func.isRequired,onFailure:c.PropTypes.func.isRequired,clientId:c.PropTypes.string.isRequired,buttonText:c.PropTypes.string,offline:c.PropTypes.bool,scope:c.PropTypes.string,className:c.PropTypes.string,redirectUri:c.PropTypes.string,cookiePolicy:c.PropTypes.string,loginHint:c.PropTypes.string,hostedDomain:c.PropTypes.string,children:l["default"].PropTypes.node},u.defaultProps={buttonText:"Login with Google",scope:"profile email",redirectUri:"postmessage",cookiePolicy:"single_host_origin"},t["default"]=u},function(e,t,o){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0});var i=o(1),r=n(i);t["default"]=r["default"]},function(t,o){t.exports=e}])});
 	//# sourceMappingURL=google-login.js.map
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37560,7 +37411,7 @@
 	
 	var _reactRouter = __webpack_require__(172);
 	
-	var _jquery = __webpack_require__(237);
+	var _jquery = __webpack_require__(236);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -37690,7 +37541,7 @@
 	});
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37705,7 +37556,7 @@
 	
 	var _reactRouter = __webpack_require__(172);
 	
-	var _jquery = __webpack_require__(237);
+	var _jquery = __webpack_require__(236);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -37835,7 +37686,7 @@
 	});
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37850,7 +37701,7 @@
 	
 	var _reactRouter = __webpack_require__(172);
 	
-	var _jquery = __webpack_require__(237);
+	var _jquery = __webpack_require__(236);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -37940,7 +37791,7 @@
 	});
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37955,7 +37806,7 @@
 	
 	var _reactRouter = __webpack_require__(172);
 	
-	var _jquery = __webpack_require__(237);
+	var _jquery = __webpack_require__(236);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
