@@ -5,7 +5,8 @@
   "scripts": {
     "watch-dev": "webpack-dev-server --inline",
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
