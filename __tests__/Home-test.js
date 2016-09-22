@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
-import Main from '../lib/main'
+import Home from '../lib/Home'
 
 
-describe("Main", () => {
+describe("Home", () => {
   it("should have blogs", () => {
     let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
+      <Home/>
     )
     // fake state for blogPosts
     mainRendered.setState({
@@ -33,7 +33,7 @@ describe("Main", () => {
 
   it("sould link to specific article", () => {
     let mainRendered = TestUtils.renderIntoDocument(
-      <Main/>
+      <Home/>
     )
     mainRendered.setState({
       blogPosts: [

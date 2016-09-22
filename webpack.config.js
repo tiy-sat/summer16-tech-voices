@@ -3,8 +3,8 @@ module.exports = {
   devtool: 'source-map',
   output: {
     filename: 'bundle.js',
-    publicPath: 'javascripts',
-    path: "javascripts"
+    publicPath: 'public/javascripts',
+    path: "public/javascripts"
   },
   module: {
     loaders: [
